@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70CC6D2C62E094F28FBE6885 /* Pods_MintynDigitalBank_MintynDigitalBankUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67FA42C27455D4703919CC8 /* Pods_MintynDigitalBank_MintynDigitalBankUITests.framework */; };
 		B46884B6273C575600807CEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46884B5273C575600807CEB /* AppDelegate.swift */; };
 		B46884B8273C575600807CEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46884B7273C575600807CEB /* SceneDelegate.swift */; };
 		B46884BD273C575600807CEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46884BB273C575600807CEB /* Main.storyboard */; };
@@ -28,6 +29,9 @@
 		B4688500273D6C3F00807CEB /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46884FF273D6C3F00807CEB /* TransactionModel.swift */; };
 		B4688502273D8C4D00807CEB /* ColourGradient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688501273D8C4D00807CEB /* ColourGradient+Extensions.swift */; };
 		B4688504273D95E500807CEB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688503273D95E500807CEB /* SignUpViewController.swift */; };
+		B4688506273DACF200807CEB /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688505273DACF200807CEB /* StartScreenViewController.swift */; };
+		D40F6DDE14E1482CF184A5FE /* Pods_MintynDigitalBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D57874D18A82CE91D0258DD /* Pods_MintynDigitalBank.framework */; };
+		DEA80D225132F4BBA39DCF8F /* Pods_MintynDigitalBankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9950A3B7232E50F349480E55 /* Pods_MintynDigitalBankTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		277A357D0B0EB964868D7371 /* Pods-MintynDigitalBankTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MintynDigitalBankTests.debug.xcconfig"; path = "Target Support Files/Pods-MintynDigitalBankTests/Pods-MintynDigitalBankTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6A4AEEA41FE77C98E856A4C9 /* Pods-MintynDigitalBank-MintynDigitalBankUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MintynDigitalBank-MintynDigitalBankUITests.debug.xcconfig"; path = "Target Support Files/Pods-MintynDigitalBank-MintynDigitalBankUITests/Pods-MintynDigitalBank-MintynDigitalBankUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		74EB3AD21DCB8719AFAEE7A1 /* Pods-MintynDigitalBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MintynDigitalBank.debug.xcconfig"; path = "Target Support Files/Pods-MintynDigitalBank/Pods-MintynDigitalBank.debug.xcconfig"; sourceTree = "<group>"; };
+		7F81702CC535B01F5F8D8B71 /* Pods-MintynDigitalBank-MintynDigitalBankUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MintynDigitalBank-MintynDigitalBankUITests.release.xcconfig"; path = "Target Support Files/Pods-MintynDigitalBank-MintynDigitalBankUITests/Pods-MintynDigitalBank-MintynDigitalBankUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9950A3B7232E50F349480E55 /* Pods_MintynDigitalBankTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MintynDigitalBankTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D57874D18A82CE91D0258DD /* Pods_MintynDigitalBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MintynDigitalBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8FF8FA49064EE5661C08F96 /* Pods-MintynDigitalBankTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MintynDigitalBankTests.release.xcconfig"; path = "Target Support Files/Pods-MintynDigitalBankTests/Pods-MintynDigitalBankTests.release.xcconfig"; sourceTree = "<group>"; };
+		AA481C2D2FEC5F33FA98C1E9 /* Pods-MintynDigitalBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MintynDigitalBank.release.xcconfig"; path = "Target Support Files/Pods-MintynDigitalBank/Pods-MintynDigitalBank.release.xcconfig"; sourceTree = "<group>"; };
 		B46884B2273C575600807CEB /* MintynDigitalBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MintynDigitalBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B46884B5273C575600807CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B46884B7273C575600807CEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +85,8 @@
 		B46884FF273D6C3F00807CEB /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		B4688501273D8C4D00807CEB /* ColourGradient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColourGradient+Extensions.swift"; sourceTree = "<group>"; };
 		B4688503273D95E500807CEB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B4688505273DACF200807CEB /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		D67FA42C27455D4703919CC8 /* Pods_MintynDigitalBank_MintynDigitalBankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MintynDigitalBank_MintynDigitalBankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D40F6DDE14E1482CF184A5FE /* Pods_MintynDigitalBank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA80D225132F4BBA39DCF8F /* Pods_MintynDigitalBankTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,12 +110,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70CC6D2C62E094F28FBE6885 /* Pods_MintynDigitalBank_MintynDigitalBankUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C7C77A818CBCA1360C3C1C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D57874D18A82CE91D0258DD /* Pods_MintynDigitalBank.framework */,
+				D67FA42C27455D4703919CC8 /* Pods_MintynDigitalBank_MintynDigitalBankUITests.framework */,
+				9950A3B7232E50F349480E55 /* Pods_MintynDigitalBankTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B46884A9273C575600807CEB = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +134,8 @@
 				B46884CB273C575900807CEB /* MintynDigitalBankTests */,
 				B46884D5273C575900807CEB /* MintynDigitalBankUITests */,
 				B46884B3273C575600807CEB /* Products */,
+				FC4FC7D2C6D2BA5ACBB79BC3 /* Pods */,
+				6C7C77A818CBCA1360C3C1C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,7 +155,6 @@
 				B46884FA273CB04700807CEB /* Models */,
 				B46884F7273CAAFB00807CEB /* Views */,
 				B46884F6273CAAF100807CEB /* Controllers */,
-				B46884F3273C848200807CEB /* BaseTabBarController */,
 				B46884E6273C81D500807CEB /* Helpers */,
 				B46884E5273C815600807CEB /* Resources */,
 				B46884E7273C81F500807CEB /* HomeScreenViewController.swift */,
@@ -187,8 +215,10 @@
 		B46884F6273CAAF100807CEB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B46884F3273C848200807CEB /* BaseTabBarController */,
 				B46884F4273CA27900807CEB /* LoginViewController.swift */,
 				B4688503273D95E500807CEB /* SignUpViewController.swift */,
+				B4688505273DACF200807CEB /* StartScreenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -211,6 +241,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FC4FC7D2C6D2BA5ACBB79BC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74EB3AD21DCB8719AFAEE7A1 /* Pods-MintynDigitalBank.debug.xcconfig */,
+				AA481C2D2FEC5F33FA98C1E9 /* Pods-MintynDigitalBank.release.xcconfig */,
+				6A4AEEA41FE77C98E856A4C9 /* Pods-MintynDigitalBank-MintynDigitalBankUITests.debug.xcconfig */,
+				7F81702CC535B01F5F8D8B71 /* Pods-MintynDigitalBank-MintynDigitalBankUITests.release.xcconfig */,
+				277A357D0B0EB964868D7371 /* Pods-MintynDigitalBankTests.debug.xcconfig */,
+				A8FF8FA49064EE5661C08F96 /* Pods-MintynDigitalBankTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,9 +261,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B46884DC273C575900807CEB /* Build configuration list for PBXNativeTarget "MintynDigitalBank" */;
 			buildPhases = (
+				370AD2C08ED882EAE3A43FAE /* [CP] Check Pods Manifest.lock */,
 				B46884AE273C575600807CEB /* Sources */,
 				B46884AF273C575600807CEB /* Frameworks */,
 				B46884B0273C575600807CEB /* Resources */,
+				63980E740933A4A24FEDD9A9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +280,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B46884DF273C575900807CEB /* Build configuration list for PBXNativeTarget "MintynDigitalBankTests" */;
 			buildPhases = (
+				15151BB1F6CFF0C213FE37FA /* [CP] Check Pods Manifest.lock */,
 				B46884C4273C575900807CEB /* Sources */,
 				B46884C5273C575900807CEB /* Frameworks */,
 				B46884C6273C575900807CEB /* Resources */,
@@ -253,9 +299,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B46884E2273C575900807CEB /* Build configuration list for PBXNativeTarget "MintynDigitalBankUITests" */;
 			buildPhases = (
+				ECE387C376523B385B1B6934 /* [CP] Check Pods Manifest.lock */,
 				B46884CE273C575900807CEB /* Sources */,
 				B46884CF273C575900807CEB /* Frameworks */,
 				B46884D0273C575900807CEB /* Resources */,
+				F4A684EB799F0BD11598F611 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -337,6 +385,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15151BB1F6CFF0C213FE37FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MintynDigitalBankTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		370AD2C08ED882EAE3A43FAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MintynDigitalBank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63980E740933A4A24FEDD9A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MintynDigitalBank/Pods-MintynDigitalBank-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MintynDigitalBank/Pods-MintynDigitalBank-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MintynDigitalBank/Pods-MintynDigitalBank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECE387C376523B385B1B6934 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MintynDigitalBank-MintynDigitalBankUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4A684EB799F0BD11598F611 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MintynDigitalBank-MintynDigitalBankUITests/Pods-MintynDigitalBank-MintynDigitalBankUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MintynDigitalBank-MintynDigitalBankUITests/Pods-MintynDigitalBank-MintynDigitalBankUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MintynDigitalBank-MintynDigitalBankUITests/Pods-MintynDigitalBank-MintynDigitalBankUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B46884AE273C575600807CEB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -349,6 +500,7 @@
 				B46884B6273C575600807CEB /* AppDelegate.swift in Sources */,
 				B46884EA273C821B00807CEB /* SettingsViewController.swift in Sources */,
 				B46884EF273C844E00807CEB /* UIView+Layout.swift in Sources */,
+				B4688506273DACF200807CEB /* StartScreenViewController.swift in Sources */,
 				B4688502273D8C4D00807CEB /* ColourGradient+Extensions.swift in Sources */,
 				B46884FE273D6C0600807CEB /* TransactionCollectionViewCell.swift in Sources */,
 				B4688504273D95E500807CEB /* SignUpViewController.swift in Sources */,
@@ -530,6 +682,7 @@
 		};
 		B46884DD273C575900807CEB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74EB3AD21DCB8719AFAEE7A1 /* Pods-MintynDigitalBank.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -558,6 +711,7 @@
 		};
 		B46884DE273C575900807CEB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA481C2D2FEC5F33FA98C1E9 /* Pods-MintynDigitalBank.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -586,6 +740,7 @@
 		};
 		B46884E0273C575900807CEB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 277A357D0B0EB964868D7371 /* Pods-MintynDigitalBankTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -610,6 +765,7 @@
 		};
 		B46884E1273C575900807CEB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8FF8FA49064EE5661C08F96 /* Pods-MintynDigitalBankTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -634,6 +790,7 @@
 		};
 		B46884E3273C575900807CEB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A4AEEA41FE77C98E856A4C9 /* Pods-MintynDigitalBank-MintynDigitalBankUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -656,6 +813,7 @@
 		};
 		B46884E4273C575900807CEB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F81702CC535B01F5F8D8B71 /* Pods-MintynDigitalBank-MintynDigitalBankUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,6 @@
+framework module Pods_MintynDigitalBank {
+  umbrella header "Pods-MintynDigitalBank-umbrella.h"
+
+  export *
+  module * { export * }
+}
