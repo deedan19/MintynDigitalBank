@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class SignUpViewController: UIViewController {
 
@@ -22,36 +23,40 @@ class SignUpViewController: UIViewController {
         emailTF.resignFirstResponder()
         passwordTF.resignFirstResponder()
         guard let email = emailTF.text?.trimmingCharacters(in: .whitespaces), let password = passwordTF.text?.trimmingCharacters(in: .whitespaces), !email.isEmpty, !password.isEmpty, password.count >= 6 else {
-            alertUserRegisterError()
+            alertUserRegisterError("Woops", "Enter all fields. Password must be 6 characters or more")
             return
         }
         
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { [weak self] signInResult, error in
-            if let err = error {
-                print("Register Error --> \(err)")
+        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { [weak self] createUserResult, error in
+            
+            guard let err = error else { return }
+            if  createUserResult == nil {
+                self?.alertUserRegisterError("Error", "\(err.localizedDescription)")
+            } else {
+                self?.resgisterSuccessAlert()
             }
-            if signInResult != nil {
-                self?.alertUserSuccessSignUp()
-            }
+           
         }
     }
     
-    private func alertUserRegisterError () {
-         let alert = UIAlertController(title: "Woops", message: "Please enter all fields to create an account", preferredStyle: .alert)
+    private func alertUserRegisterError (_ title: String, _ message: String) {
+         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
          alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
          present(alert, animated: true, completion: nil)
      }
     
-    private func alertUserSuccessSignUp () {
-         let alert = UIAlertController(title: "Woops", message: "Please enter all fields to create an account. Log in now", preferredStyle: .alert)
-         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+    private func resgisterSuccessAlert () {
+         let alert = UIAlertController(title: "Success", message: "Account successfully created", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(alert, animated: true) {
             self.navigationController?.popViewController(animated: true)
         }
      }
+
     
-    
-    @IBAction func didTapRegisterButton(_ sender: UIButton) {
+    @IBAction func didTapRegisterButton () {
         registerButtonTapped()
     }
 }
+
+

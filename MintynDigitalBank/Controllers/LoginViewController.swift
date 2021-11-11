@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
     }
     
     private func setupViews () {
+        passwordTF.leftView = UIView (frame: CGRect(x: 0, y: 0, width: 15, height: 0))
         textFieldWrapperStyling([phoneTFWrapper, passWordTFWrapper])
         styleCheckBox()
         styleLoginButton()
@@ -65,23 +66,46 @@ class LoginViewController: UIViewController {
        
         let email = phoneNumTF.text!, password = passwordTF.text!
         
+        if email.isEmpty || password.isEmpty {
+            alertUserLoginError("Woops", "Fill all fields to log in")
+        }
+        
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { [weak self ] signInResult, error in
-            guard (signInResult != nil), error == nil else { return }
             
-            guard let homeScreenVC = self?.storyboard?.instantiateViewController(withIdentifier: "baseTabBar") as? UITabBarController else { return }
-            homeScreenVC.modalPresentationStyle = .fullScreen
-            self?.present(homeScreenVC, animated: true, completion: nil)
+            guard let err = error else { return }
+            if signInResult == nil {
+                self?.alertUserLoginError("Error", "\(err.localizedDescription)")
+            }
+            
+            if signInResult != nil  {
+                self?.alertUserLoginSuccess()
+            }
+            
+          
         }
     }
     
-   private func alertUserLoginError () {
-        let alert = UIAlertController(title: "Woops", message: "Please enter all fields to log in", preferredStyle: .alert)
+    private func alertUserLoginError ( _ title: String, _ message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
+    private func alertUserLoginSuccess () {
+         let alert = UIAlertController(title: "Success", message: "Login in success", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true)
+            
+     }
+    
+    private func toHomeScreen () {
+        guard let homeScreenVC = storyboard?.instantiateViewController(withIdentifier: "baseTabBar") as? UITabBarController else { return }
+        homeScreenVC.modalPresentationStyle = .fullScreen
+        present(homeScreenVC, animated: true, completion: nil)
+    }
+    
     @IBAction func didTapLoginButton(_ sender: UIButton) {
-     loginButtonTapped()
+      toHomeScreen()
     }
 }
 
@@ -119,3 +143,15 @@ extension LoginViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     
 }
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == phoneNumTF {
+            passwordTF.becomeFirstResponder()
+        } else if textField == passwordTF {
+            loginButtonTapped()
+        }
+        return true
+    }
+}
+

@@ -31,6 +31,7 @@
 		B4688504273D95E500807CEB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688503273D95E500807CEB /* SignUpViewController.swift */; };
 		B4688506273DACF200807CEB /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688505273DACF200807CEB /* StartScreenViewController.swift */; };
 		B4688508273DB8F300807CEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4688507273DB8F200807CEB /* GoogleService-Info.plist */; };
+		B468850A273DCF5300807CEB /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688509273DCF5300807CEB /* SettingsModel.swift */; };
 		D40F6DDE14E1482CF184A5FE /* Pods_MintynDigitalBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D57874D18A82CE91D0258DD /* Pods_MintynDigitalBank.framework */; };
 		DEA80D225132F4BBA39DCF8F /* Pods_MintynDigitalBankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9950A3B7232E50F349480E55 /* Pods_MintynDigitalBankTests.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,7 @@
 		B4688503273D95E500807CEB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B4688505273DACF200807CEB /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		B4688507273DB8F200807CEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B4688509273DCF5300807CEB /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		D67FA42C27455D4703919CC8 /* Pods_MintynDigitalBank_MintynDigitalBankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MintynDigitalBank_MintynDigitalBankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -160,8 +162,6 @@
 				B46884F6273CAAF100807CEB /* Controllers */,
 				B46884E6273C81D500807CEB /* Helpers */,
 				B46884E5273C815600807CEB /* Resources */,
-				B46884E7273C81F500807CEB /* HomeScreenViewController.swift */,
-				B46884E9273C821B00807CEB /* SettingsViewController.swift */,
 				B46884BB273C575600807CEB /* Main.storyboard */,
 				B46884BE273C575800807CEB /* Assets.xcassets */,
 				B46884C0273C575800807CEB /* LaunchScreen.storyboard */,
@@ -222,6 +222,8 @@
 				B46884F4273CA27900807CEB /* LoginViewController.swift */,
 				B4688503273D95E500807CEB /* SignUpViewController.swift */,
 				B4688505273DACF200807CEB /* StartScreenViewController.swift */,
+				B46884E7273C81F500807CEB /* HomeScreenViewController.swift */,
+				B46884E9273C821B00807CEB /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -240,6 +242,7 @@
 			children = (
 				B46884FB273CB05700807CEB /* ServiceCellModel.swift */,
 				B46884FF273D6C3F00807CEB /* TransactionModel.swift */,
+				B4688509273DCF5300807CEB /* SettingsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 			files = (
 				B46884F5273CA27900807CEB /* LoginViewController.swift in Sources */,
 				B46884EE273C844E00807CEB /* Extensions.swift in Sources */,
+				B468850A273DCF5300807CEB /* SettingsModel.swift in Sources */,
 				B46884F2273C846B00807CEB /* BaseTabBarController.swift in Sources */,
 				B46884E8273C81F500807CEB /* HomeScreenViewController.swift in Sources */,
 				B46884B6273C575600807CEB /* AppDelegate.swift in Sources */,
