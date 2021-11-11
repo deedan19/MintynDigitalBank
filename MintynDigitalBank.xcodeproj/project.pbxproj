@@ -30,6 +30,7 @@
 		B4688502273D8C4D00807CEB /* ColourGradient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688501273D8C4D00807CEB /* ColourGradient+Extensions.swift */; };
 		B4688504273D95E500807CEB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688503273D95E500807CEB /* SignUpViewController.swift */; };
 		B4688506273DACF200807CEB /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688505273DACF200807CEB /* StartScreenViewController.swift */; };
+		B4688508273DB8F300807CEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4688507273DB8F200807CEB /* GoogleService-Info.plist */; };
 		D40F6DDE14E1482CF184A5FE /* Pods_MintynDigitalBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D57874D18A82CE91D0258DD /* Pods_MintynDigitalBank.framework */; };
 		DEA80D225132F4BBA39DCF8F /* Pods_MintynDigitalBankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9950A3B7232E50F349480E55 /* Pods_MintynDigitalBankTests.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 		B4688501273D8C4D00807CEB /* ColourGradient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColourGradient+Extensions.swift"; sourceTree = "<group>"; };
 		B4688503273D95E500807CEB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B4688505273DACF200807CEB /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		B4688507273DB8F200807CEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D67FA42C27455D4703919CC8 /* Pods_MintynDigitalBank_MintynDigitalBankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MintynDigitalBank_MintynDigitalBankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 		B46884B4273C575600807CEB /* MintynDigitalBank */ = {
 			isa = PBXGroup;
 			children = (
+				B4688507273DB8F200807CEB /* GoogleService-Info.plist */,
 				B46884FA273CB04700807CEB /* Models */,
 				B46884F7273CAAFB00807CEB /* Views */,
 				B46884F6273CAAF100807CEB /* Controllers */,
@@ -364,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B46884C2273C575800807CEB /* LaunchScreen.storyboard in Resources */,
+				B4688508273DB8F300807CEB /* GoogleService-Info.plist in Resources */,
 				B46884BF273C575800807CEB /* Assets.xcassets in Resources */,
 				B46884BD273C575600807CEB /* Main.storyboard in Resources */,
 			);

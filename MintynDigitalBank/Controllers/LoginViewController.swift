@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
@@ -58,10 +59,29 @@ class LoginViewController: UIViewController {
         baseViewWrapper.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
     }
     
+    private func loginButtonTapped () {
+        phoneNumTF.resignFirstResponder()
+        passwordTF.resignFirstResponder()
+       
+        let email = phoneNumTF.text!, password = passwordTF.text!
+        
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { [weak self ] signInResult, error in
+            guard (signInResult != nil), error == nil else { return }
+            
+            guard let homeScreenVC = self?.storyboard?.instantiateViewController(withIdentifier: "baseTabBar") as? UITabBarController else { return }
+            homeScreenVC.modalPresentationStyle = .fullScreen
+            self?.present(homeScreenVC, animated: true, completion: nil)
+        }
+    }
+    
+   private func alertUserLoginError () {
+        let alert = UIAlertController(title: "Woops", message: "Please enter all fields to log in", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func didTapLoginButton(_ sender: UIButton) {
-        guard let homeScreenVC = storyboard?.instantiateViewController(withIdentifier: "baseTabBar") as? UITabBarController else { return }
-        homeScreenVC.modalPresentationStyle = .fullScreen
-        present(homeScreenVC, animated: true, completion: nil)
+     loginButtonTapped()
     }
 }
 
