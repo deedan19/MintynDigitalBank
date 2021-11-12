@@ -42,7 +42,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case  3:
-            print("To legal")
+            toLegalsScreen()
         case 5:
             print("To Systems")
         case 7:
@@ -54,11 +54,18 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     
+    
+    
 //    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 //        return settingsData[section].title
 //    }
     
     
+    
+    private func toLegalsScreen () {
+        guard let legalControler = storyboard?.instantiateViewController(withIdentifier: "") as? LegalsViewController else { return }
+        navigationController?.pushViewController(legalControler, animated: true)
+    }
 }
 
 

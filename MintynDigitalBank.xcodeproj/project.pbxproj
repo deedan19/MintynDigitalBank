@@ -21,7 +21,6 @@
 		B46884EE273C844E00807CEB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46884EB273C844E00807CEB /* Extensions.swift */; };
 		B46884EF273C844E00807CEB /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46884EC273C844E00807CEB /* UIView+Layout.swift */; };
 		B46884F0273C844E00807CEB /* StackViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46884ED273C844E00807CEB /* StackViews.swift */; };
-		B46884F2273C846B00807CEB /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46884F1273C846B00807CEB /* BaseTabBarController.swift */; };
 		B46884F5273CA27900807CEB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46884F4273CA27900807CEB /* LoginViewController.swift */; };
 		B46884F9273CAB2000807CEB /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46884F8273CAB2000807CEB /* ServiceCell.swift */; };
 		B46884FC273CB05700807CEB /* ServiceCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46884FB273CB05700807CEB /* ServiceCellModel.swift */; };
@@ -32,6 +31,8 @@
 		B4688506273DACF200807CEB /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688505273DACF200807CEB /* StartScreenViewController.swift */; };
 		B4688508273DB8F300807CEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4688507273DB8F200807CEB /* GoogleService-Info.plist */; };
 		B468850A273DCF5300807CEB /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688509273DCF5300807CEB /* SettingsModel.swift */; };
+		B468850C273DE69F00807CEB /* LegalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468850B273DE69F00807CEB /* LegalModels.swift */; };
+		B468850E273DE7E500807CEB /* LegalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468850D273DE7E500807CEB /* LegalsViewController.swift */; };
 		D40F6DDE14E1482CF184A5FE /* Pods_MintynDigitalBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D57874D18A82CE91D0258DD /* Pods_MintynDigitalBank.framework */; };
 		DEA80D225132F4BBA39DCF8F /* Pods_MintynDigitalBankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9950A3B7232E50F349480E55 /* Pods_MintynDigitalBankTests.framework */; };
 /* End PBXBuildFile section */
@@ -79,7 +80,6 @@
 		B46884EB273C844E00807CEB /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B46884EC273C844E00807CEB /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		B46884ED273C844E00807CEB /* StackViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViews.swift; sourceTree = "<group>"; };
-		B46884F1273C846B00807CEB /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		B46884F4273CA27900807CEB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B46884F8273CAB2000807CEB /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		B46884FB273CB05700807CEB /* ServiceCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCellModel.swift; sourceTree = "<group>"; };
@@ -90,6 +90,8 @@
 		B4688505273DACF200807CEB /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		B4688507273DB8F200807CEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B4688509273DCF5300807CEB /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		B468850B273DE69F00807CEB /* LegalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalModels.swift; sourceTree = "<group>"; };
+		B468850D273DE7E500807CEB /* LegalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalsViewController.swift; sourceTree = "<group>"; };
 		D67FA42C27455D4703919CC8 /* Pods_MintynDigitalBank_MintynDigitalBankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MintynDigitalBank_MintynDigitalBankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -207,23 +209,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		B46884F3273C848200807CEB /* BaseTabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				B46884F1273C846B00807CEB /* BaseTabBarController.swift */,
-			);
-			path = BaseTabBarController;
-			sourceTree = "<group>";
-		};
 		B46884F6273CAAF100807CEB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B46884F3273C848200807CEB /* BaseTabBarController */,
 				B46884F4273CA27900807CEB /* LoginViewController.swift */,
 				B4688503273D95E500807CEB /* SignUpViewController.swift */,
 				B4688505273DACF200807CEB /* StartScreenViewController.swift */,
 				B46884E7273C81F500807CEB /* HomeScreenViewController.swift */,
 				B46884E9273C821B00807CEB /* SettingsViewController.swift */,
+				B468850D273DE7E500807CEB /* LegalsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -243,6 +237,7 @@
 				B46884FB273CB05700807CEB /* ServiceCellModel.swift */,
 				B46884FF273D6C3F00807CEB /* TransactionModel.swift */,
 				B4688509273DCF5300807CEB /* SettingsModel.swift */,
+				B468850B273DE69F00807CEB /* LegalModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -503,10 +498,10 @@
 				B46884F5273CA27900807CEB /* LoginViewController.swift in Sources */,
 				B46884EE273C844E00807CEB /* Extensions.swift in Sources */,
 				B468850A273DCF5300807CEB /* SettingsModel.swift in Sources */,
-				B46884F2273C846B00807CEB /* BaseTabBarController.swift in Sources */,
 				B46884E8273C81F500807CEB /* HomeScreenViewController.swift in Sources */,
 				B46884B6273C575600807CEB /* AppDelegate.swift in Sources */,
 				B46884EA273C821B00807CEB /* SettingsViewController.swift in Sources */,
+				B468850C273DE69F00807CEB /* LegalModels.swift in Sources */,
 				B46884EF273C844E00807CEB /* UIView+Layout.swift in Sources */,
 				B4688506273DACF200807CEB /* StartScreenViewController.swift in Sources */,
 				B4688502273D8C4D00807CEB /* ColourGradient+Extensions.swift in Sources */,
@@ -514,6 +509,7 @@
 				B4688504273D95E500807CEB /* SignUpViewController.swift in Sources */,
 				B4688500273D6C3F00807CEB /* TransactionModel.swift in Sources */,
 				B46884FC273CB05700807CEB /* ServiceCellModel.swift in Sources */,
+				B468850E273DE7E500807CEB /* LegalsViewController.swift in Sources */,
 				B46884F9273CAB2000807CEB /* ServiceCell.swift in Sources */,
 				B46884B8273C575600807CEB /* SceneDelegate.swift in Sources */,
 				B46884F0273C844E00807CEB /* StackViews.swift in Sources */,
