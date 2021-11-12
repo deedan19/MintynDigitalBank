@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import FirebaseAuth
-import Firebase
 
 class SignUpViewController: UIViewController {
 
@@ -30,12 +28,8 @@ class SignUpViewController: UIViewController {
             return
         }
         
-        registerUserAuth.registerUser(with: email, and: password) { [weak self] result, error in
-            guard let err = error else { return }
-            result ? self?.resgisterSuccessAlert() : self?.alertUserRegisterError("Error", "\(err.localizedDescription)")
-            if result == true {
-                self?.resgisterSuccessAlert()
-            }
+        registerUserAuth.registerUser(with: email, and: password) { [weak self] result in
+            result ? self?.resgisterSuccessAlert() : self?.alertUserRegisterError("Error", "\(self?.registerUserAuth.errorHandler?.localizedDescription ?? "Cannot register user")")
         }
     }
     
@@ -46,14 +40,12 @@ class SignUpViewController: UIViewController {
      }
     
     private func resgisterSuccessAlert () {
-         let alert = UIAlertController(title: "Success", message: "Account successfully created", preferredStyle: .alert)
+         let alert = UIAlertController(title: "Success", message: "Account successfully created. Go back to login", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alert, animated: true)
-                
-//                , completion: {
-//            self.emailTF.text = ""
-//            self.passwordTF.text = ""
-//        })
+        present(alert, animated: true, completion: {
+            self.emailTF.text = ""
+            self.passwordTF.text = ""
+        })
      }
 
     

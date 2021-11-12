@@ -9,30 +9,33 @@ import UIKit
 import FirebaseAuth
 
 class AuthManager {
-    func registerUser (with email: String, and password: String, completion: @escaping ((Bool, Error?)->())) {
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { registerUserRes , error in
-            guard error == nil else {
-                completion(false,error)
-                return
+    var errorHandler: Error?
+    func registerUser (with email: String, and password: String, completion: @escaping ((Bool)->())) {
+        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) {[weak self] registerUserRes , error in
+            if error != nil {
+                self?.errorHandler = error
+                completion(false)
             }
+//            guard error == nil else {
+//                completion(false)
+//                return
+//            }
             
-            if registerUserRes != nil {
-                completion(true, nil)
-            }
+//            if registerUserRes != nil {
+                completion(true)
+//            }
             
         }
     }
     
-    func loginUser (with email: String, and password: String, completion: @escaping ((Bool, Error?)->())) {
-        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { loginRes , error in
-            guard error == nil else {
-                completion(false, error)
-                return
-            }
+    func loginUser (with email: String, and password: String, completion: @escaping ((Bool)->())) {
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) {[weak self] loginRes, error in
             
-            if loginRes != nil {
-                completion(true, nil)
+            if error != nil {
+                self?.errorHandler = error
+                completion(false)
             }
+                completion(true)
         }
     }
 }

@@ -6,13 +6,12 @@
 //
 
 import UIKit
-import FirebaseAuth
+
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var serviceCollectionView: UICollectionView!
     @IBOutlet weak var baseViewWrapper: UIView!
-    
     @IBOutlet weak var phoneTFWrapper: UIView!
     @IBOutlet weak var phoneNumTF: UITextField!
     @IBOutlet weak var passWordTFWrapper: UIView!
@@ -85,16 +84,11 @@ class LoginViewController: UIViewController {
         if email.isEmpty || password.isEmpty {
             alertUserLoginError("Woops", "Fill all fields to log in")
         } else {
-            loginAuth.loginUser(with: email, and: password) {[weak self] result, error in
-                guard let err = error else { return }
-                if result == false {
-                    self?.alertUserLoginError("Error", "\(err.localizedDescription)")
-                } else {
-                    print("Login Successful")
-                }
+            
+            loginAuth.loginUser(with: email, and: password) {[weak self] result in
+                result ? self?.toHomeScreen() :  self?.alertUserLoginError("Error", "\(self?.loginAuth.errorHandler?.localizedDescription ?? "Login Error")")
             }
         }
-
     }
     
 
