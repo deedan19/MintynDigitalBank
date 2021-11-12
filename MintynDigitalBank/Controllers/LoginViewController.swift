@@ -20,15 +20,19 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var checkBox: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
+    private let loginAuth = AuthManager()
+    var toggleChecker = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
         serviceCollectionView.delegate = self
         serviceCollectionView.dataSource = self
         setupViews()
     }
     
     private func setupViews () {
+//        passwordTF.isSecureTextEntry = true
         passwordTF.leftView = UIView (frame: CGRect(x: 0, y: 0, width: 15, height: 0))
         textFieldWrapperStyling([phoneTFWrapper, passWordTFWrapper])
         styleCheckBox()
@@ -61,43 +65,11 @@ class LoginViewController: UIViewController {
         baseViewWrapper.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
     }
     
-    private func loginButtonTapped () {
-        phoneNumTF.resignFirstResponder()
-        passwordTF.resignFirstResponder()
-       
-        let email = phoneNumTF.text!, password = passwordTF.text!
-        
-        if email.isEmpty || password.isEmpty {
-            alertUserLoginError("Woops", "Fill all fields to log in")
-        }
-        
-        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { [weak self ] signInResult, error in
-            
-            guard let err = error else { return }
-            if signInResult == nil {
-                self?.alertUserLoginError("Error", "\(err.localizedDescription)")
-            }
-            
-            if signInResult != nil  {
-                self?.alertUserLoginSuccess()
-            }
-            
-          
-        }
-    }
-    
     private func alertUserLoginError ( _ title: String, _ message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-    
-    private func alertUserLoginSuccess () {
-         let alert = UIAlertController(title: "Success", message: "Login in success", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true)
-            
-     }
     
     private func toHomeScreen () {
         guard let homeScreenVC = storyboard?.instantiateViewController(withIdentifier: "baseTabBar") as? UITabBarController else { return }
@@ -105,8 +77,31 @@ class LoginViewController: UIViewController {
         present(homeScreenVC, animated: true, completion: nil)
     }
     
+    private func loginButtonTapped () {
+        phoneNumTF.resignFirstResponder()
+        passwordTF.resignFirstResponder()
+       
+        let email = phoneNumTF.text!, password = passwordTF.text!
+        if email.isEmpty || password.isEmpty {
+            alertUserLoginError("Woops", "Fill all fields to log in")
+        }
+        
+        loginAuth.loginUser(with: email, and: password) {[weak self] result, error in
+            guard let err = error else { return }
+            result ? self?.toHomeScreen() : self?.alertUserLoginError("Error", "\(err.localizedDescription)")
+        }
+    }
+    
+
+    
+    @IBAction func markCheckBox () {
+        toggleChecker.toggle()
+        toggleChecker ?  checkBox.setImage(UIImage(systemName: "checkmark"), for: .normal) :  checkBox.setImage(UIImage(), for: .normal)
+    }
+    
     @IBAction func didTapLoginButton(_ sender: UIButton) {
-      toHomeScreen()
+        loginButtonTapped()
+//        toHomeScreen()
     }
 }
 
@@ -124,7 +119,6 @@ extension LoginViewController: UICollectionViewDelegate, UICollectionViewDataSou
         } else {
             cell.comingSoonLabel.text = ""
         }
-        
         return cell
         
     }

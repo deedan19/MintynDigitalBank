@@ -32,9 +32,11 @@
 		B4688508273DB8F300807CEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4688507273DB8F200807CEB /* GoogleService-Info.plist */; };
 		B468850A273DCF5300807CEB /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688509273DCF5300807CEB /* SettingsModel.swift */; };
 		B468850C273DE69F00807CEB /* LegalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468850B273DE69F00807CEB /* LegalModels.swift */; };
-		B468850E273DE7E500807CEB /* LegalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468850D273DE7E500807CEB /* LegalsViewController.swift */; };
 		B4688510273DEB8600807CEB /* SystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468850F273DEB8600807CEB /* SystemViewController.swift */; };
 		B4688512273DEC1A00807CEB /* SystemModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688511273DEC1A00807CEB /* SystemModels.swift */; };
+		B4688514273E75AF00807CEB /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688513273E75AE00807CEB /* LegalViewController.swift */; };
+		B4688516273E760C00807CEB /* HyperLink+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688515273E760C00807CEB /* HyperLink+Extenstion.swift */; };
+		B4688519273E7EBA00807CEB /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688518273E7EBA00807CEB /* AuthManager.swift */; };
 		D40F6DDE14E1482CF184A5FE /* Pods_MintynDigitalBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D57874D18A82CE91D0258DD /* Pods_MintynDigitalBank.framework */; };
 		DEA80D225132F4BBA39DCF8F /* Pods_MintynDigitalBankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9950A3B7232E50F349480E55 /* Pods_MintynDigitalBankTests.framework */; };
 /* End PBXBuildFile section */
@@ -93,9 +95,11 @@
 		B4688507273DB8F200807CEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B4688509273DCF5300807CEB /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		B468850B273DE69F00807CEB /* LegalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalModels.swift; sourceTree = "<group>"; };
-		B468850D273DE7E500807CEB /* LegalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalsViewController.swift; sourceTree = "<group>"; };
 		B468850F273DEB8600807CEB /* SystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemViewController.swift; sourceTree = "<group>"; };
 		B4688511273DEC1A00807CEB /* SystemModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemModels.swift; sourceTree = "<group>"; };
+		B4688513273E75AE00807CEB /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
+		B4688515273E760C00807CEB /* HyperLink+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HyperLink+Extenstion.swift"; sourceTree = "<group>"; };
+		B4688518273E7EBA00807CEB /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		D67FA42C27455D4703919CC8 /* Pods_MintynDigitalBank_MintynDigitalBankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MintynDigitalBank_MintynDigitalBankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -163,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				B4688507273DB8F200807CEB /* GoogleService-Info.plist */,
+				B4688517273E7EA000807CEB /* AuthManager */,
 				B46884FA273CB04700807CEB /* Models */,
 				B46884F7273CAAFB00807CEB /* Views */,
 				B46884F6273CAAF100807CEB /* Controllers */,
@@ -209,6 +214,7 @@
 				B46884ED273C844E00807CEB /* StackViews.swift */,
 				B46884EC273C844E00807CEB /* UIView+Layout.swift */,
 				B4688501273D8C4D00807CEB /* ColourGradient+Extensions.swift */,
+				B4688515273E760C00807CEB /* HyperLink+Extenstion.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -221,8 +227,8 @@
 				B4688505273DACF200807CEB /* StartScreenViewController.swift */,
 				B46884E7273C81F500807CEB /* HomeScreenViewController.swift */,
 				B46884E9273C821B00807CEB /* SettingsViewController.swift */,
-				B468850D273DE7E500807CEB /* LegalsViewController.swift */,
 				B468850F273DEB8600807CEB /* SystemViewController.swift */,
+				B4688513273E75AE00807CEB /* LegalViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -246,6 +252,14 @@
 				B4688511273DEC1A00807CEB /* SystemModels.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B4688517273E7EA000807CEB /* AuthManager */ = {
+			isa = PBXGroup;
+			children = (
+				B4688518273E7EBA00807CEB /* AuthManager.swift */,
+			);
+			path = AuthManager;
 			sourceTree = "<group>";
 		};
 		FC4FC7D2C6D2BA5ACBB79BC3 /* Pods */ = {
@@ -516,9 +530,11 @@
 				B4688504273D95E500807CEB /* SignUpViewController.swift in Sources */,
 				B4688500273D6C3F00807CEB /* TransactionModel.swift in Sources */,
 				B4688510273DEB8600807CEB /* SystemViewController.swift in Sources */,
+				B4688516273E760C00807CEB /* HyperLink+Extenstion.swift in Sources */,
 				B46884FC273CB05700807CEB /* ServiceCellModel.swift in Sources */,
-				B468850E273DE7E500807CEB /* LegalsViewController.swift in Sources */,
+				B4688514273E75AF00807CEB /* LegalViewController.swift in Sources */,
 				B46884F9273CAB2000807CEB /* ServiceCell.swift in Sources */,
+				B4688519273E7EBA00807CEB /* AuthManager.swift in Sources */,
 				B46884B8273C575600807CEB /* SceneDelegate.swift in Sources */,
 				B46884F0273C844E00807CEB /* StackViews.swift in Sources */,
 			);

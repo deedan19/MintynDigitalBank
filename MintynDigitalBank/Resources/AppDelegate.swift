@@ -10,12 +10,16 @@ import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+//    UIApplication.shared.openURL(NSURL(string: "http://www.example.com")!)
+//    UIApplication.shared.ope
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        let BarButtonItemAppearance = UIBarButtonItem.appearance()
+        BarButtonItemAppearance.setTitleTextAttributes([.foregroundColor: UIColor.clear], for: .normal)
         return true
     }
 

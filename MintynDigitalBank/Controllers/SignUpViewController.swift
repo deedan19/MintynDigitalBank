@@ -14,9 +14,11 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+    private let registerUserAuth = AuthManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        passwordTF.isSecureTextEntry = true
     }
     
     
@@ -28,15 +30,12 @@ class SignUpViewController: UIViewController {
             return
         }
         
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { [weak self] createUserResult, error in
-            
+        registerUserAuth.registerUser(with: email, and: password) { [weak self] result, error in
             guard let err = error else { return }
-            if  createUserResult == nil {
-                self?.alertUserRegisterError("Error", "\(err.localizedDescription)")
-            } else {
+            result ? self?.resgisterSuccessAlert() : self?.alertUserRegisterError("Error", "\(err.localizedDescription)")
+            if result == true {
                 self?.resgisterSuccessAlert()
             }
-           
         }
     }
     
@@ -49,9 +48,10 @@ class SignUpViewController: UIViewController {
     private func resgisterSuccessAlert () {
          let alert = UIAlertController(title: "Success", message: "Account successfully created", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alert, animated: true) {
-            self.navigationController?.popViewController(animated: true)
-        }
+        present(alert, animated: true, completion: {
+            self.emailTF.text = ""
+            self.passwordTF.text = ""
+        })
      }
 
     

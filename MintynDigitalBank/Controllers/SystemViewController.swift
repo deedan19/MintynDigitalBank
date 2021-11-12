@@ -39,6 +39,9 @@ extension SystemViewCOntroller: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "systemCell", for: indexPath)
         cell.textLabel?.text = systemModelData[indexPath.row].title
         cell.imageView?.image = UIImage()
+        if indexPath.row == 0 {
+            cell.accessoryType = .checkmark
+        }
         return cell
     }
     

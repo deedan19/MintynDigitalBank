@@ -32,6 +32,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.imageView?.image = UIImage(systemName: settingsData[indexPath.row].icon)
         cell.imageView?.tintColor = .lightGray
         cell.textLabel?.text = settingsData[indexPath.row].title
+//        cell.isSelected
         return cell
     }
     
@@ -40,6 +41,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case  3:
             toLegalsScreen()
@@ -56,6 +58,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     
+    
 //    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 //        return settingsData[section].title
 //    }
@@ -63,7 +66,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     private func toLegalsScreen () {
-        guard let legalControler = storyboard?.instantiateViewController(withIdentifier: "LegalsViewController") as? LegalsViewController else { return }
+        guard let legalControler = storyboard?.instantiateViewController(withIdentifier: "LegalViewController") as? LegalViewController else { return }
         navigationController?.pushViewController(legalControler, animated: true)
     }
     
