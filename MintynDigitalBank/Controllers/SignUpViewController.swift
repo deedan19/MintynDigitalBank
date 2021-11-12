@@ -48,10 +48,12 @@ class SignUpViewController: UIViewController {
     private func resgisterSuccessAlert () {
          let alert = UIAlertController(title: "Success", message: "Account successfully created", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alert, animated: true, completion: {
-            self.emailTF.text = ""
-            self.passwordTF.text = ""
-        })
+        present(alert, animated: true)
+                
+//                , completion: {
+//            self.emailTF.text = ""
+//            self.passwordTF.text = ""
+//        })
      }
 
     

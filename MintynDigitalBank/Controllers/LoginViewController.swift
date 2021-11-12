@@ -88,7 +88,7 @@ class LoginViewController: UIViewController {
         
         loginAuth.loginUser(with: email, and: password) {[weak self] result, error in
             guard let err = error else { return }
-            result ? self?.toHomeScreen() : self?.alertUserLoginError("Error", "\(err.localizedDescription)")
+            result ? print("Login Successful") : self?.alertUserLoginError("Error", "\(err.localizedDescription)")
         }
     }
     
