@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
     }
     
     private func setupViews () {
-//        passwordTF.isSecureTextEntry = true
+        passwordTF.isSecureTextEntry = true
         passwordTF.leftView = UIView (frame: CGRect(x: 0, y: 0, width: 15, height: 0))
         textFieldWrapperStyling([phoneTFWrapper, passWordTFWrapper])
         styleCheckBox()
@@ -68,13 +68,13 @@ class LoginViewController: UIViewController {
     private func alertUserLoginError ( _ title: String, _ message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
-        present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func toHomeScreen () {
         guard let homeScreenVC = storyboard?.instantiateViewController(withIdentifier: "baseTabBar") as? UITabBarController else { return }
         homeScreenVC.modalPresentationStyle = .fullScreen
-        present(homeScreenVC, animated: true, completion: nil)
+        self.present(homeScreenVC, animated: true, completion: nil)
     }
     
     private func loginButtonTapped () {
@@ -84,12 +84,17 @@ class LoginViewController: UIViewController {
         let email = phoneNumTF.text!, password = passwordTF.text!
         if email.isEmpty || password.isEmpty {
             alertUserLoginError("Woops", "Fill all fields to log in")
+        } else {
+            loginAuth.loginUser(with: email, and: password) {[weak self] result, error in
+                guard let err = error else { return }
+                if result == false {
+                    self?.alertUserLoginError("Error", "\(err.localizedDescription)")
+                } else {
+                    print("Login Successful")
+                }
+            }
         }
-        
-        loginAuth.loginUser(with: email, and: password) {[weak self] result, error in
-            guard let err = error else { return }
-            result ? print("Login Successful") : self?.alertUserLoginError("Error", "\(err.localizedDescription)")
-        }
+
     }
     
 
@@ -101,9 +106,10 @@ class LoginViewController: UIViewController {
     
     @IBAction func didTapLoginButton(_ sender: UIButton) {
         loginButtonTapped()
-//        toHomeScreen()
     }
 }
+
+
 
 extension LoginViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

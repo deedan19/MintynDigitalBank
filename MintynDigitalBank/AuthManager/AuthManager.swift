@@ -10,22 +10,29 @@ import FirebaseAuth
 
 class AuthManager {
     func registerUser (with email: String, and password: String, completion: @escaping ((Bool, Error?)->())) {
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { _ , error in
+        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { registerUserRes , error in
             guard error == nil else {
                 completion(false,error)
                 return
             }
-            completion(true, nil)
+            
+            if registerUserRes != nil {
+                completion(true, nil)
+            }
+            
         }
     }
     
     func loginUser (with email: String, and password: String, completion: @escaping ((Bool, Error?)->())) {
-        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { _, error in
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { loginRes , error in
             guard error == nil else {
                 completion(false, error)
                 return
             }
-            completion(true, nil)
+            
+            if loginRes != nil {
+                completion(true, nil)
+            }
         }
     }
 }
