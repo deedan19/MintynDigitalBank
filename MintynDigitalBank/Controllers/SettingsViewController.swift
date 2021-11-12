@@ -44,9 +44,9 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         case  3:
             toLegalsScreen()
         case 5:
-            print("To Systems")
+            toSystemScreen()
         case 7:
-            print("Logout")
+            dismiss(animated: true, completion: nil)
         default:
             print("Testing")
         }
@@ -63,9 +63,19 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     private func toLegalsScreen () {
-        guard let legalControler = storyboard?.instantiateViewController(withIdentifier: "") as? LegalsViewController else { return }
+        guard let legalControler = storyboard?.instantiateViewController(withIdentifier: "LegalsViewController") as? LegalsViewController else { return }
         navigationController?.pushViewController(legalControler, animated: true)
     }
+    
+    private func toSystemScreen () {
+        guard let legalControler = storyboard?.instantiateViewController(withIdentifier: "SystemViewCOntroller") as? SystemViewCOntroller else { return }
+        navigationController?.pushViewController(legalControler, animated: true)
+    }
+    
+    func logout () {
+        
+    }
+    
 }
 
 

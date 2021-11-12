@@ -33,6 +33,8 @@
 		B468850A273DCF5300807CEB /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688509273DCF5300807CEB /* SettingsModel.swift */; };
 		B468850C273DE69F00807CEB /* LegalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468850B273DE69F00807CEB /* LegalModels.swift */; };
 		B468850E273DE7E500807CEB /* LegalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468850D273DE7E500807CEB /* LegalsViewController.swift */; };
+		B4688510273DEB8600807CEB /* SystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B468850F273DEB8600807CEB /* SystemViewController.swift */; };
+		B4688512273DEC1A00807CEB /* SystemModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4688511273DEC1A00807CEB /* SystemModels.swift */; };
 		D40F6DDE14E1482CF184A5FE /* Pods_MintynDigitalBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D57874D18A82CE91D0258DD /* Pods_MintynDigitalBank.framework */; };
 		DEA80D225132F4BBA39DCF8F /* Pods_MintynDigitalBankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9950A3B7232E50F349480E55 /* Pods_MintynDigitalBankTests.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +94,8 @@
 		B4688509273DCF5300807CEB /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		B468850B273DE69F00807CEB /* LegalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalModels.swift; sourceTree = "<group>"; };
 		B468850D273DE7E500807CEB /* LegalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalsViewController.swift; sourceTree = "<group>"; };
+		B468850F273DEB8600807CEB /* SystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemViewController.swift; sourceTree = "<group>"; };
+		B4688511273DEC1A00807CEB /* SystemModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemModels.swift; sourceTree = "<group>"; };
 		D67FA42C27455D4703919CC8 /* Pods_MintynDigitalBank_MintynDigitalBankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MintynDigitalBank_MintynDigitalBankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -218,6 +222,7 @@
 				B46884E7273C81F500807CEB /* HomeScreenViewController.swift */,
 				B46884E9273C821B00807CEB /* SettingsViewController.swift */,
 				B468850D273DE7E500807CEB /* LegalsViewController.swift */,
+				B468850F273DEB8600807CEB /* SystemViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 				B46884FF273D6C3F00807CEB /* TransactionModel.swift */,
 				B4688509273DCF5300807CEB /* SettingsModel.swift */,
 				B468850B273DE69F00807CEB /* LegalModels.swift */,
+				B4688511273DEC1A00807CEB /* SystemModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -505,9 +511,11 @@
 				B46884EF273C844E00807CEB /* UIView+Layout.swift in Sources */,
 				B4688506273DACF200807CEB /* StartScreenViewController.swift in Sources */,
 				B4688502273D8C4D00807CEB /* ColourGradient+Extensions.swift in Sources */,
+				B4688512273DEC1A00807CEB /* SystemModels.swift in Sources */,
 				B46884FE273D6C0600807CEB /* TransactionCollectionViewCell.swift in Sources */,
 				B4688504273D95E500807CEB /* SignUpViewController.swift in Sources */,
 				B4688500273D6C3F00807CEB /* TransactionModel.swift in Sources */,
+				B4688510273DEB8600807CEB /* SystemViewController.swift in Sources */,
 				B46884FC273CB05700807CEB /* ServiceCellModel.swift in Sources */,
 				B468850E273DE7E500807CEB /* LegalsViewController.swift in Sources */,
 				B46884F9273CAB2000807CEB /* ServiceCell.swift in Sources */,
