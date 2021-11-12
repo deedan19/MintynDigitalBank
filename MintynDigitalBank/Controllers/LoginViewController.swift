@@ -86,6 +86,8 @@ class LoginViewController: UIViewController {
         } else {
             
             loginAuth.loginUser(with: email, and: password) {[weak self] result in
+                self?.phoneNumTF.text = ""
+                self?.passwordTF.text = ""
                 result ? self?.toHomeScreen() :  self?.alertUserLoginError("Error", "\(self?.loginAuth.errorHandler?.localizedDescription ?? "Login Error")")
             }
         }

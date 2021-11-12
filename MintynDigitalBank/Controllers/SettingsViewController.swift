@@ -10,6 +10,8 @@ import UIKit
 class SettingsViewController: UIViewController {
     @IBOutlet weak var settingsTableView: UITableView!
     
+    private let logoutAuth = AuthManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         settingsTableView.delegate = self
@@ -32,7 +34,6 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.imageView?.image = UIImage(systemName: settingsData[indexPath.row].icon)
         cell.imageView?.tintColor = .lightGray
         cell.textLabel?.text = settingsData[indexPath.row].title
-//        cell.isSelected
         return cell
     }
     
@@ -48,22 +49,11 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         case 5:
             toSystemScreen()
         case 7:
-            dismiss(animated: true, completion: nil)
+            logout()
         default:
-            print("Testing")
+            break
         }
     }
-    
-    
-    
-    
-    
-    
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return settingsData[section].title
-//    }
-    
-    
     
     private func toLegalsScreen () {
         guard let legalControler = storyboard?.instantiateViewController(withIdentifier: "LegalViewController") as? LegalViewController else { return }
@@ -75,8 +65,16 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         navigationController?.pushViewController(legalControler, animated: true)
     }
     
+    private func alertUserLogoutError ( _ title: String, _ message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func logout () {
-        
+        logoutAuth.userLogOut {[weak self] logoutResult in
+            logoutResult ? self?.dismiss(animated: true, completion: nil) : self?.alertUserLogoutError("Woops", "\(self?.logoutAuth.errorHandler?.localizedDescription ?? "Can't log out")")
+        }
     }
     
 }

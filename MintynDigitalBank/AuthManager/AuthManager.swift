@@ -16,15 +16,7 @@ class AuthManager {
                 self?.errorHandler = error
                 completion(false)
             }
-//            guard error == nil else {
-//                completion(false)
-//                return
-//            }
-            
-//            if registerUserRes != nil {
                 completion(true)
-//            }
-            
         }
     }
     
@@ -37,5 +29,16 @@ class AuthManager {
             }
                 completion(true)
         }
+    }
+    
+    func userLogOut (completion: @escaping ((Bool)-> Void)) {
+        do {
+            try FirebaseAuth.Auth.auth().signOut()
+            completion(true)
+        } catch {
+            completion(false)
+            errorHandler = error
+        }
+        
     }
 }
